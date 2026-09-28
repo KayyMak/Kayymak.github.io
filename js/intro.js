@@ -11,6 +11,9 @@
 
 // How long the bar takes to fill, assuming the page is already loaded.
 const LOADING_MS = 1800;
+// Keep the intro available to restore later, but open straight to the page.
+const SHOW_INTRO = false;
+const SHOW_LOADING_SCREEN = false;
 
 // The bar climbs on a clock, but holds at this mark until the browser says
 // every image, stylesheet, and script has finished loading. That way the last
@@ -165,15 +168,20 @@ function camefromInsideTheSite() {
 }
 
 // Pages without the overlays, and arrivals from elsewhere on the site, skip it.
-if (loadingScreen && continueScreen && !camefromInsideTheSite()) {
-  window.addEventListener("load", function () {
-    pageLoaded = true;
-  });
+if (SHOW_INTRO && loadingScreen && continueScreen && !camefromInsideTheSite()) {
+  if (SHOW_LOADING_SCREEN) {
+    window.addEventListener("load", function () {
+      pageLoaded = true;
+    });
 
-  // If the load event never arrives, don't strand the visitor behind the bar.
-  setTimeout(function () {
-    pageLoaded = true;
-  }, LOADING_MS * 3);
+    // If the load event never arrives, don't strand the visitor behind the bar.
+    setTimeout(function () {
+      pageLoaded = true;
+    }, LOADING_MS * 3);
 
-  showLoading();
+    showLoading();
+  } else {
+    body.classList.add("intro-active");
+    showReady();
+  }
 }
