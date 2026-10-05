@@ -262,6 +262,23 @@ section > h2,
   font-size: var(--step-1);
 }
 
+#projects .entry h2 a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+#projects .entry h2 a:hover,
+#projects .entry h2 a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+.project-link-icon {
+  display: inline-block;
+  margin-left: 0.25em;
+  font-size: 0.8em;
+}
+
 .entry-date {
   font-size: var(--step--1);
   color: var(--text-muted);
