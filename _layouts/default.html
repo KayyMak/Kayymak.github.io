@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
-    <link rel="icon" type="image/webp" href="{{ '/assets/images/geass-logo.webp' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/geass-logo-transparent.png' | relative_url }}">
     <link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}">
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T2BJCNQP"></script>
     <script>
@@ -18,7 +18,7 @@
   <body>
     <div class="site-page">
       <header class="home-header">
-        <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Home"><img src="{{ '/assets/images/geass-logo.webp' | relative_url }}" alt="" width="900" height="900"></a>
+        <a class="site-mark" href="{{ '/' | relative_url }}" aria-label="Home"><img src="{{ '/assets/images/geass-logo-transparent.png' | relative_url }}" alt="" width="900" height="900"></a>
         <nav class="home-nav" aria-label="Main navigation">
           <a href="{{ '/' | relative_url }}" {% if page.section == 'home' %}aria-current="page"{% endif %}>Home</a>
           <a href="{{ '/about.html' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>About</a>
