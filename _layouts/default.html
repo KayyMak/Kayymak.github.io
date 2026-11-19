@@ -15,32 +15,25 @@
     </script>
   </head>
   <body>
-    <div class="site-shell">
-      <aside class="sidebar" aria-label="Site navigation">
-        <div class="sidebar-top">
-          <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Olukayode Makinde-Odusola, home">mak<span class="wordmark-dot">.</span></a>
-          <nav class="main-nav" aria-label="Main">
-            <a href="{{ '/' | relative_url }}" {% if page.section == 'home' %}aria-current="page"{% endif %}>Home</a>
-            <a href="{{ '/about.html' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>About</a>
-            <a href="{{ '/experience.html' | relative_url }}" {% if page.section == 'experience' %}aria-current="page"{% endif %}>Experience</a>
-            <a href="{{ '/projects.html' | relative_url }}" {% if page.section == 'projects' %}aria-current="page"{% endif %}>Projects</a>
-            <a href="{{ '/activities.html' | relative_url }}" {% if page.section == 'activities' %}aria-current="page"{% endif %}>Activities</a>
-          </nav>
+    <div class="site-page">
+      <header class="home-header">
+        <nav class="home-nav" aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}" {% if page.section == 'home' %}aria-current="page"{% endif %}>Home</a>
+          <a href="{{ '/about.html' | relative_url }}" {% if page.section == 'about' %}aria-current="page"{% endif %}>About</a>
+          <a href="{{ '/experience.html' | relative_url }}" {% if page.section == 'experience' %}aria-current="page"{% endif %}>Experience</a>
+          <a href="{{ '/projects.html' | relative_url }}" {% if page.section == 'projects' %}aria-current="page"{% endif %}>Projects</a>
+          <a href="{{ '/activities.html' | relative_url }}" {% if page.section == 'activities' %}aria-current="page"{% endif %}>Activities</a>
+        </nav>
+        <a class="directory-link" href="{{ '/minimal.html' | relative_url }}">Directory view</a>
+      </header>
+      <main id="content" class="content">{{ content }}</main>
+      <footer class="home-footer">
+        <div class="home-contact" aria-label="Contact links">
+          <a href="https://github.com/KayyMak" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/olukayodem" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:olukayodemak@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
         </div>
-        <div class="sidebar-bottom">
-          <nav class="view-switch" aria-label="Site view"><span aria-current="page">Editorial</span><a href="{{ '/minimal.html' | relative_url }}">Directory</a></nav>
-          <div class="sidebar-social">
-            <a href="https://github.com/KayyMak" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/olukayodem" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:olukayodemak@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
-          </div>
-          <small>© Olukayode</small>
-        </div>
-      </aside>
-      <div class="content-shell">
-        <main id="content" class="content">{{ content }}</main>
-
-      </div>
+      </footer>
     </div>
   </body>
 </html>
