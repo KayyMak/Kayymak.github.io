@@ -34,7 +34,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
   flex: none;
   padding: 11px 14px;
   border: 1px solid var(--ink);
-  font: 500 11px/1.2 var(--mono);
+  font: 500 14px/1.2 var(--type);
   white-space: nowrap;
 }
 .directory-link:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
@@ -68,7 +68,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .home-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
 
 .home-footer { display: flex; align-items: center; min-height: 72px; padding: 17px clamp(32px, 5.5vw, 96px); border-top: 1px solid var(--line); }
-.home-contact { display: flex; flex-wrap: wrap; gap: 10px 32px; font: 400 11px/1.5 var(--mono); }
+.home-contact { display: flex; flex-wrap: wrap; gap: 10px 32px; font: 400 14px/1.5 var(--type); }
 
 @media (max-width: 900px) {
   .home-main { grid-template-columns: minmax(0, 55%) minmax(0, 45%); }
