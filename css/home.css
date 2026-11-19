@@ -27,7 +27,9 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 }
 .home-nav { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(20px, 2.7vw, 46px); }
 .home-nav a { padding: 7px 0; border-bottom: 1px solid transparent; font-size: 14px; white-space: nowrap; }
-.home-nav a:hover, .home-nav a[aria-current='page'] { border-bottom-color: var(--ink); text-decoration: none; }
+.home-nav a:hover { text-decoration: none; }
+.home-nav a:not([aria-current='page']):hover { border-bottom-color: var(--ink); }
+.home-nav a[aria-current='page'] { font-weight: 600; }
 .directory-link {
   flex: none;
   padding: 11px 14px;
