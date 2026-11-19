@@ -1,0 +1,8 @@
+title: Olukayode Makinde-Odusola
+description: Computer science student at UC Davis building useful software.
+url: ""
+baseurl: ""
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock

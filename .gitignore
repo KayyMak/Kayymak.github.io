@@ -12,3 +12,6 @@ desktop.ini
 
 # Personal documents — never publish these to GitHub Pages
 *.pdf
+
+_site/
+.sass-cache/
