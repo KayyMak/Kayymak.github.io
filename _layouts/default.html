@@ -7,7 +7,7 @@
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description | escape }}">
     <link rel="icon" type="image/png" href="{{ '/assets/images/geass-logo-transparent.png' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}?v=nav-layout-2">
+    <link rel="stylesheet" href="{{ '/css/site.css' | relative_url }}?v=one-page-activities">
     <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T2BJCNQP"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -24,7 +24,7 @@
           <a href="{{ '/' | relative_url }}">Home</a>
           <a href="{{ '/' | relative_url }}#experience">Experience</a>
           <a href="{{ '/' | relative_url }}#projects">Projects</a>
-          <a href="{{ '/activities.html' | relative_url }}">Activities</a>
+          <a href="{{ '/' | relative_url }}#activities">Activities</a>
         </nav>
         <a class="directory-link" href="{{ '/minimal.html' | relative_url }}">Directory view</a>
       </header>
