@@ -17,9 +17,12 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 .home-page { display: flex; flex-direction: column; min-height: 100svh; }
+.home-page, .site-page { padding-top: var(--header-height, 8rem); }
 .home-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 20;
   background: var(--paper);
   display: flex;
@@ -83,6 +86,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 }
 
 @media (max-width: 700px) {
+  :root { --header-height: 11rem; }
   .home-header { flex-wrap: wrap; gap: 17px 24px; padding: 22px 24px; }
   .site-mark { order: 1; }
   .directory-link { order: 2; margin-left: auto; }

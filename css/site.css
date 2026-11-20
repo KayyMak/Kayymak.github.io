@@ -1,4 +1,4 @@
-@import url('./home.css');
+@import url('./home.css?v=nav-layout-2');
 
 .site-page { display: flex; flex-direction: column; min-height: 100svh; }
 .content { width: min(100%, 1440px); margin-inline: auto; flex: 1; padding: clamp(72px, 9vh, 120px) clamp(32px, 5.5vw, 96px) 130px; }
@@ -39,23 +39,23 @@
 .gallery-controls button:disabled { opacity: .4; cursor: default; }
 .gallery-count { min-width: 36px; text-align: center; }
 
-.project-collection { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 72px 48px; padding: 44px 0 32px; }
-.project-exhibit { min-width: 0; }
-.project-link { display: block; color: inherit; text-decoration: none; border-radius: 18px; transition: transform 220ms ease; }
+.project-collection { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 72px 48px; padding: 44px 0 32px; }
+.project-exhibit { display: flex; min-width: 0; }
+.project-link { display: flex; flex-direction: column; width: 100%; color: inherit; text-decoration: none; border-radius: 18px; transition: transform 220ms ease; }
 .project-link:hover { text-decoration: none; }
 .project-link:focus-visible { outline-offset: 8px; }
 .project-link:hover .project-visual { outline: 1px solid var(--ink); outline-offset: -1px; }
-.project-visual { position: relative; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; min-width: 0; overflow: hidden; border-radius: 18px; }
+.project-visual { position: relative; display: flex; flex: none; align-items: center; justify-content: center; aspect-ratio: 4 / 3; width: 100%; min-width: 0; overflow: hidden; border-radius: 18px; }
 .project-visual > * { transition: transform 320ms ease; }
 .project-link:is(:hover, :focus-visible) h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .project-link:hover { transform: translateY(-4px); }
   .project-link:hover .project-visual > * { transform: scale(1.035); }
 }
-.project-copy { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px 24px; align-items: start; padding-top: 20px; }
+.project-copy { display: grid; flex: 1; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr auto; gap: 10px; align-items: start; padding-top: 24px; }
 .project-copy :is(h2, h3) { grid-column: 1; margin: 0; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.1; letter-spacing: -.035em; }
 .project-description { grid-column: 1; max-width: 34rem; margin: 0; color: var(--muted); font-size: 16px; }
-.project-action { grid-column: 2; grid-row: 1 / span 2; justify-self: end; padding: 7px 0; border-bottom: 1px solid var(--ink); font-size: 14px; white-space: nowrap; }
+.project-action { grid-column: 1; grid-row: 3; align-self: end; justify-self: start; margin-top: 12px; padding: 7px 0; border-bottom: 1px solid var(--ink); font-size: 14px; white-space: nowrap; }
 
 .visual-moober { background: #fff; }
 .visual-moober img { display: block; width: 70%; height: 80%; object-fit: contain; }
