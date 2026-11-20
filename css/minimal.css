@@ -31,3 +31,11 @@ hr { border:0; border-top:1px solid #aaa; margin:2rem 0; }
 .gallery-caption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.75rem 1rem; padding:.7rem .8rem; border-top:1px solid #c9c9c9; font-size:.875rem; }
 .gallery-controls { display:flex; align-items:center; gap:.6rem; }
 .gallery-count { min-width:2.5rem; text-align:center; }
+.directory-experience-heading { display:flex; align-items:center; gap:1rem; margin-top:2.25rem; }
+.directory-experience-heading img { flex:0 0 96px; width:96px; height:72px; object-fit:contain; }
+.directory-experience-heading h2 { margin:0 0 .5rem; }
+.directory-experience-heading p { margin:0; }
+@media (max-width:480px) {
+  .directory-experience-heading { gap:.75rem; }
+  .directory-experience-heading img { flex-basis:72px; width:72px; height:60px; }
+}

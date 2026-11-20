@@ -48,8 +48,11 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
   justify-content: center;
   align-items: flex-start;
   min-width: 0;
+  background: #34413e;
+  color: #f0eee9;
   padding: 70px 32px 90px clamp(32px, 5.5vw, 96px);
 }
+.home-copy a:focus-visible { outline-color: currentColor; }
 .home-copy h1 {
   margin: 0;
   font-size: clamp(49px, 5.15vw, 76px);
@@ -60,11 +63,9 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 .home-facts {
   width: min(100%, 390px);
   margin-top: clamp(54px, 9vh, 112px);
-  padding-top: 17px;
-  border-top: 1px solid var(--ink);
 }
 .home-facts p { margin: 0; font-size: 15px; }
-.home-facts p + p { margin-top: 5px; color: var(--muted); }
+.home-facts p + p { margin-top: 5px; color: #d3d9d4; }
 
 .home-portrait { min-width: 0; min-height: 590px; margin: 0; overflow: hidden; background: #c7c4ca; }
 .home-portrait img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
