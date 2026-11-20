@@ -50,11 +50,7 @@
 .project-action { grid-column: 2; grid-row: 2 / span 2; justify-self: end; padding: 7px 0; border-bottom: 1px solid var(--ink); font-size: 14px; white-space: nowrap; }
 
 .visual-moober { background: #d9ddd6; }
-.visual-moober svg { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
-.map-streets { fill: none; stroke: #bec8bc; stroke-width: 17; }
-.map-route { fill: none; stroke: #575f57; stroke-width: 5; stroke-linecap: square; }
-.map-stop { fill: #575f57; stroke: #e8e7df; stroke-width: 5; }
-.visual-note { position: absolute; bottom: 18px; left: 22px; color: #455247; font: 400 10px var(--mono); letter-spacing: .06em; }
+.visual-moober img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .visual-mile { background: #ded7cd; }
 .ledger { width: min(76%, 430px); padding: 26px 30px 38px; border: 1px solid #aaa49b; background: #eeeae2; color: #3f3d37; font: 11px var(--mono); }
 .ledger-head, .ledger-row { display: grid; grid-template-columns: 45px 1fr 20px; gap: 12px; align-items: baseline; }
@@ -106,21 +102,13 @@
   .scoreboard-head, .scoreboard-row { grid-template-columns: 45px 1fr 48px; }
 }
 
-/* The full portfolio lives on the homepage; section links work without JavaScript. */
+/* Experience and projects follow the original homepage introduction. */
 html { scroll-behavior: smooth; }
 .skip-link { position: absolute; top: 12px; left: 24px; z-index: 10; padding: 12px 18px; background: var(--ink); color: var(--paper); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
-.portfolio-page .home-main { grid-template-columns: minmax(0, 1fr) 190px; align-items: center; gap: 48px; min-height: 0; max-width: 1440px; margin: auto; padding: 58px clamp(32px, 5.5vw, 96px) 64px; }
-.portfolio-page .home-copy { padding: 0; }
-.portfolio-page .home-copy h1 { font-size: clamp(42px, 5vw, 68px); }
-.portfolio-page .home-facts { width: auto; margin-top: 26px; padding-top: 0; border: 0; }
-.portfolio-page .home-facts p { font-size: 16px; }
-.portfolio-page .home-portrait { min-height: 0; width: 190px; height: 220px; border-radius: 4px; }
-.portfolio-page .home-portrait img { object-position: center 28%; }
 .portfolio-section { max-width: 1440px; margin: auto; padding: 48px clamp(32px, 5.5vw, 96px) 64px; scroll-margin-top: 24px; }
 .section-intro { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px 24px; padding-top: 24px; border-top: 1px solid var(--ink); }
 .section-intro h2 { margin: 0; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.2; letter-spacing: -.035em; }
-.section-intro p { margin: 0 0 0 auto; color: var(--muted); }
 .portfolio-page .project-collection { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding-top: 32px; }
 .portfolio-page .project-copy { grid-template-columns: 1fr; }
 .portfolio-page .project-copy h3 { font-size: 30px; }
@@ -131,38 +119,24 @@ html { scroll-behavior: smooth; }
 .portfolio-page .ledger-row { grid-template-columns: 20px 1fr 10px; gap: 8px; min-height: 44px; padding: 14px 0; }
 .portfolio-page .scoreboard-head, .portfolio-page .scoreboard-row { grid-template-columns: 40px 1fr 40px; gap: 8px; }
 .portfolio-page .scoreboard-row { min-height: 54px; font-size: 16px; }
+.company-logo { flex: 0 0 56px; width: 56px; height: 56px; object-fit: contain; border-radius: 8px; }
+.experience-entry > p { margin: 18px 0; line-height: 1.75; }
+.experience-skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.experience-skills li { padding: 4px 11px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; }
 .experience-list { max-width: 900px; margin: 12px auto 0; }
 .experience-entry { padding: 32px 0; border-bottom: 1px solid var(--line); }
 .experience-entry:last-child { border-bottom: 0; padding-bottom: 0; }
 .experience-heading { display: flex; align-items: center; gap: 18px; }
-.company-mark { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 10px; background: #253f51; color: #fff; font: 500 16px var(--mono); }
-.mark-learnhaus { background: #5b4969; }
-.mark-roseville { background: #3d5848; }
 .experience-heading h3 { margin: 0; font-size: clamp(20px, 2.1vw, 26px); font-weight: 500; line-height: 1.3; letter-spacing: -.015em; }
 .experience-company { margin: 5px 0 0; color: var(--muted); }
-.experience-entry > p { margin: 18px 0; line-height: 1.75; }
-.experience-skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.experience-skills li { padding: 4px 11px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; }
-.education-section { padding-top: 0; padding-bottom: 16px; }
-.portfolio-page .skills-list dt { font-size: 14px; }
-.activities-section .item h3 { grid-column: 1; grid-row: 1 / span 3; margin: 0; font-size: clamp(26px, 2.7vw, 37px); font-weight: 400; line-height: 1.2; letter-spacing: -.025em; }
-.portfolio-page .item .org, .portfolio-page .gallery-caption { font-size: 14px; }
 .portfolio-page .home-nav a { font-size: 14px; }
 @media (max-width: 1000px) and (min-width: 701px) {
   .portfolio-page .project-collection { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  .portfolio-page .home-main { display: grid; grid-template-columns: 1fr 100px; gap: 20px; padding: 40px 24px; }
-  .portfolio-page .home-copy h1 { font-size: clamp(28px, 5.4vw, 38px); overflow-wrap: anywhere; }
-  .portfolio-page .home-portrait { width: 100px; height: 130px; }
-  .portfolio-page .home-facts { margin-top: 20px; }
   .portfolio-section { padding: 32px 24px 48px; }
   .portfolio-page .project-collection { grid-template-columns: 1fr; gap: 40px; }
-  .section-intro p { margin-left: 0; }
   .experience-heading { align-items: flex-start; gap: 12px; }
-  .company-mark { flex-basis: 40px; height: 40px; font-size: 14px; }
-  .education-section { padding-top: 0; padding-bottom: 0; }
-  .activities-section .item h3 { grid-column: 1; grid-row: auto; margin-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
